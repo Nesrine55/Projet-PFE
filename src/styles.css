@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: rgb(11, 8, 67);
+    font-family: "Raleway", sans-serif;
+    min-height: 100vh;
+}
+
+

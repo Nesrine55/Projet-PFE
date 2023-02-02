@@ -1,0 +1,16 @@
+<div class="verif">
+    <h1>Verify Your Account</h1>
+    <p>We emailed you the code to Confirm your email address</p>
+    <form (ngSubmit)="validateEmail()">
+        <div class="error-text">
+            <h5>error</h5>
+        </div>
+        <div class="fields-input">
+            <input type="email" class="email" [(ngModel)]="email" name="email" required />
+
+        </div>
+        <div class="submit">
+            <input type="submit" value="Verify Now" class="button">
+        </div>
+    </form>
+</div>
