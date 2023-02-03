@@ -13,7 +13,7 @@ import { MailvalidationComponent } from './mailvalidation/mailvalidation.compone
 
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
+  {path:'home',component:HomeComponent},
   {path:'discover',component:DiscoverComponent},
   {path:'about',component:HelpComponent},
   {path:'help',component:AboutComponent},

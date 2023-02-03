@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
 
-
+.container1{
+    ;
+    margin-left: 50px;
+}
 
 
 .box{
@@ -140,6 +143,7 @@ h4{
     z-index: 0;
     border-radius: 10px;
     margin-top:50px;
+    font-size: 18px;
 }
 
 /*btn animation*/
