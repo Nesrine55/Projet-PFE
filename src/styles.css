@@ -2,9 +2,11 @@ body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background: rgb(8, 5, 64);
+    background: blue;
     font-family: "Raleway", sans-serif;
     min-height: 100vh;
+    
 }
+
 
 
