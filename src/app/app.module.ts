@@ -15,6 +15,7 @@ import { ForgetpswComponent } from './forgetpsw/forgetpsw.component';
 import { MailvalidationComponent } from './mailvalidation/mailvalidation.component';
 
 @NgModule({
+  
   declarations: [
     AppComponent,
     HomeComponent,
@@ -36,4 +37,6 @@ import { MailvalidationComponent } from './mailvalidation/mailvalidation.compone
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

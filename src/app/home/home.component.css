@@ -1,235 +1,330 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
-body{
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    background: blue;
-}
 
 
+/*
 .container{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 300px;
+    
+    
 }
 h1{
     z-index: 1000;
     line-height: 1em;
-    
+    color: #00ffd5;
 }
 .blocks{
+    margin-top: 50px;
     position: absolute;
     width: 50px;
     height:100px;
-    background: blue;
+    background: rgb(81, 81, 198);
     box-shadow: 10px 10px 50px rgba(0,0,0,0.2);
-}
-
-
-
-
-
-.container1{
-    position: absolute;
-    left: 40%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-
-}
-
-
-.box{
-    display: inline-flex;
-    margin-top: 30px;
-    margin: auto;
-   
-}
-
-.static-txt{
-    color: white;
-    font-size: 60px;
-    font-weight: 400;
-    line-height: 90px;
     
-    margin-top: 70px;
-    font-size: 70px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    font-family: "Raleway", sans-serif;
+}*/
 
-}
-.dynamic-txts{
-    margin-left: 15px;
-    height: 90px;
-    line-height: 90px;
+
+:root {
+    --card-width: 200px;
+    --card-height: 300px;
+    --card-transition-duration: 800ms;
+    --card-transition-easing: ease;
+ }
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+ }
+  button:focus {
+    outline: none;
+    border: none;
+ }
+  .app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+  .app__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    filter: blur(8px);
+    pointer-events: none;
+    user-select: none;
     overflow: hidden;
-    margin-top: 70px;
-    font-size: 70px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    font-family: "Raleway", sans-serif;
-}
-
-.dynamic-txts li{
-    color: blue;
-    list-style: none;
-    font-size: 60px;
-    font-weight: 500;
-    position: relative;
-    top: 0;
-    animation: slide 6s steps(4) infinite;
-    font-size: 70px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    font-family: "Raleway", sans-serif;
-
-}
-
-@keyframes slide{
-    100%{
-        top: -360px;
-    }
-}
-
-.dynamic-txts li span{
-    position: relative;
-}
-.dynamic-txts li span::after{
+ }
+  .app__bg::before {
     content: "";
     position: absolute;
     left: 0;
-    height: 100%;
+    top: 0;
     width: 100%;
-    background:  rgb(11, 8, 67);
-    border-left: 2px solid blue;
-    
-    animation: typing 1.5s steps(10) infinite;
-}
-
-@keyframes typing{
-    100%{
-        left: 100%;
-        margin: 0 -15px 0 35px;
-    }
-}
-
-iframe{
+    height: 100%;
+    background: #000;
+    z-index: 1;
+    opacity: 0.8;
+ }
+  .app__bg__image {
     position: absolute;
-    width: 650px;
-    float: right;
-    margin-left: 650px;
-    margin-top: 50px;
-}
-
-
-h2{
-    color: aliceblue;
-    /*margin-left: 400px;*/
-    margin-top: 100px;
-    font-size: 40px;
-    font-weight: bolder;
-}
-
-h3{
-    color: aliceblue;
-    /*margin-left: 450px;*/
-    margin-top: 70px;
-    font-weight:bold;
-    font-size: 30px;
-
-}
-h4{
-    
-    color: aliceblue;
-    font-weight: 300;
-    margin-top: 70px;
-
-}
-
-.box2 div{
-    float: left;
-    width: 180px;
-    height: 160px;
-}
-
-
-
-.aa{
-    margin-left: 0px;
-
-}
-.btn{
-
-    width: 170px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    margin-top:50px;
-    font-size: 18px;
-}
-
-/*btn animation*/
-.btn:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-
-.btn:active {
-    color: rgb(0, 0, 0)
-}
-
-
-.btn:active:after {
-    background: transparent;
-}
-
-
-.btn:hover:before {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateX(var(--image-translate-offset, 0));
+    width: 180%;
+    height: 180%;
+    transition: transform 1000ms ease, opacity 1000ms ease;
+    overflow: hidden;
+ }
+  .app__bg__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+  .app__bg__image.current--image {
     opacity: 1;
-}
-
-.btn:after {
-    z-index: -1;
-    content: '';
+    --image-translate-offset: 0;
+ }
+  .app__bg__image.previous--image, .app__bg__image.next--image {
+    opacity: 0;
+ }
+  .app__bg__image.previous--image {
+    --image-translate-offset: -25%;
+ }
+  .app__bg__image.next--image {
+    --image-translate-offset: 25%;
+ }
+  .cardList {
     position: absolute;
+    width: calc(3 * var(--card-width));
+    height: auto;
+ }
+  .cardList__btn {
+    --btn-size: 35px;
+    width: var(--btn-size);
+    height: var(--btn-size);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+ }
+  .cardList__btn.btn--left {
+    left: -5%;
+ }
+  .cardList__btn.btn--right {
+    right: -5%;
+ }
+  .cardList__btn .icon {
     width: 100%;
     height: 100%;
-    background: rgb(7, 2, 38);
+ }
+  .cardList__btn .icon svg {
+    width: 100%;
+    height: 100%;
+ }
+  .cardList .cards__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+ }
+  .card {
+    --card-translateY-offset: 100vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateX(var(--card-translateX-offset)) translateY(var(--card-translateY-offset)) rotateY(var(--card-rotation-offset)) scale(var(--card-scale-offset));
+    display: inline-block;
+    width: var(--card-width);
+    height: var(--card-height);
+    transition: transform var(--card-transition-duration) var(--card-transition-easing);
+    user-select: none;
+ }
+  .card::before {
+    content: "";
+    position: absolute;
     left: 0;
     top: 0;
-    border-radius: 10px;
-}
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 1;
+    transition: opacity var(--card-transition-duration) var(--card-transition-easing);
+    opacity: calc(1 - var(--opacity));
+ }
+  .card__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+ }
+  .card__image img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+  .card.current--card {
+    --current-card-rotation-offset: 0;
+    --card-translateX-offset: 0;
+    --card-rotation-offset: var(--current-card-rotation-offset);
+    --card-scale-offset: 1.2;
+    --opacity: 0.8;
+ }
+  .card.previous--card {
+    --card-translateX-offset: calc(-1 * var(--card-width) * 1.1);
+    --card-rotation-offset: 25deg;
+ }
+  .card.next--card {
+    --card-translateX-offset: calc(var(--card-width) * 1.1);
+    --card-rotation-offset: -25deg;
+ }
+  .card.previous--card, .card.next--card {
+    --card-scale-offset: 0.9;
+    --opacity: 0.4;
+ }
+  .infoList {
+    position: absolute;
+    width: calc(3 * var(--card-width));
+    height: var(--card-height);
+    pointer-events: none;
+ }
+  .infoList .info__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+ }
+  .info {
+    margin-bottom: calc(var(--card-height) / 8);
+    margin-left: calc(var(--card-width) / 1.5);
+    transform: translateZ(2rem);
+    transition: transform var(--card-transition-duration) var(--card-transition-easing);
+ }
+  .info .text {
+    position: relative;
+    font-family: "Montserrat";
+    font-size: calc(var(--card-width) * var(--text-size-offset, 0.2));
+    white-space: nowrap;
+    color: #fff;
+    width: fit-content;
+ }
+  .info .name, .info .location {
+    text-transform: uppercase;
+ }
+  .info .location {
+    font-weight: 800;
+ }
+  .info .location {
+    --mg-left: 40px;
+    --text-size-offset: 0.12;
+    font-weight: 600;
+    margin-left: var(--mg-left);
+    margin-bottom: calc(var(--mg-left) / 2);
+    padding-bottom: 0.8rem;
+ }
+  .info .location::before, .info .location::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    left: 0%;
+    transform: translate(calc(-1 * var(--mg-left)), -50%);
+ }
+  .info .location::before {
+    top: 50%;
+    width: 20px;
+    height: 5px;
+ }
+  .info .location::after {
+    bottom: 0;
+    width: 60px;
+    height: 2px;
+ }
+  .info .description {
+    --text-size-offset: 0.065;
+    font-weight: 500;
+ }
+  .info.current--info {
+    opacity: 1;
+    display: block;
+ }
+  .info.previous--info, .info.next--info {
+    opacity: 0;
+    display: none;
+ }
+  .loading__wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    z-index: 200;
+ }
+  .loading__wrapper .loader--text {
+    color: #fff;
+    font-family: "Montserrat";
+    font-weight: 500;
+    margin-bottom: 1.4rem;
+ }
+  .loading__wrapper .loader {
+    position: relative;
+    width: 200px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.25);
+ }
+  .loading__wrapper .loader span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transform: scaleX(0);
+    transform-origin: left;
+ }
+  @media only screen and (min-width: 800px) {
+    :root {
+      --card-width: 250px;
+      --card-height: 400px;
+   }
+ }
+  .support {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    display: flex;
+ }
+  .support a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.8rem;
+    backface-visibility: hidden;
+    transition: all 150ms ease;
+ }
+  .support a:hover {
+    transform: scale(1.1);
+ }
+  
 
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
+
+
