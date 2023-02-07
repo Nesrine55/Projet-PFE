@@ -1,5 +1,5 @@
 a.logo {
-  color: #9ab5ee;
+  color: #c9bbaa;
   font-size: 30px;
   font-weight: 700;
   text-decoration: none;
@@ -15,11 +15,11 @@ a.logo span {
 nav {
   
   background: #2915aa00;
-  padding: 5px 100px;
+  padding: 5px 20px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
 }
-ul.menu{
+ul{
   list-style-type: none;
 }
 a {
@@ -29,7 +29,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: aqua;
+  color: #eee79a;
 }
 .logo a:hover {
   text-decoration: none;
@@ -123,8 +123,8 @@ a:hover {
   }
   .button a {
       padding: 7.5px 15px;
-      background: #9ab5ee;
-      border: 1px #8aa1d3 solid;
+      background: #8b7358;
+      border: 1px #8b7358 solid;
       border-radius:50em;
   }
   .button.secondary a {
@@ -135,8 +135,8 @@ a:hover {
       transition:all .25s;
   }
   .button:not(.secondary) a:hover {
-      background: #9ab5ee;
-      border-color: #5581df;
+    
+      border-color: #8b7358;
   }
   .button.secondary a:hover {
       color: #ddd;
