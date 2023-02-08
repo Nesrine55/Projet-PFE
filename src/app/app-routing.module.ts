@@ -15,8 +15,8 @@ import { MailvalidationComponent } from './mailvalidation/mailvalidation.compone
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'discover',component:DiscoverComponent},
-  {path:'about',component:HelpComponent},
-  {path:'help',component:AboutComponent},
+  {path:'help',component:HelpComponent},
+  {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
   {path:'joinus',component:JoinusComponent},
   {path:'login',component:LoginComponent},

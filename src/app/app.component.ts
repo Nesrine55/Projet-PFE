@@ -11,7 +11,7 @@ declare var $: any;
 export class AppComponent {
   title = 'stage';
   public ngOnInit(){
-    $(function() {
+    $(document).ready(function() {
       $(".toggle").on("click", function() {
           if ($(".item").hasClass("active")) {
               $(".item").removeClass("active");

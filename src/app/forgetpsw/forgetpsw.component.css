@@ -47,7 +47,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgb(0, 0, 0);
     z-index: -1;
   }
   .brand a.logo {
@@ -222,6 +222,7 @@
     border-radius: 30px;
     margin-right: 20px;
     border: none;
+    margin-left: 50px;
     font-family: "Montserrat", sans-serif;
   }
   .form form .CTA a.switch {

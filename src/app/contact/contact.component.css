@@ -1,96 +1,132 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+/*section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+    width: 85vw;
+    margin: 0 auto;
+    
+}
+.images{
+    background: url(../../assets/contactus.png);
 
-
-.container form{
-    width: 670px;
-    height: 400px;
+}*/
+form{
+    background: rgba(27,31,34,0.80);
+    width: 640px;
+    margin: 20px auto;
+    max-width: 97%;
+    border-radius: 14px;
+    padding: 4px 30px;
+   
+  }
+  
+  form .title h2{
+    letter-spacing: 6px;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+    color: white;
+  }
+  
+  form .half{
     display: flex;
-    justify-content: center;
-    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
-    border-radius: 15px;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    flex-wrap: wrap;
-    align-items: center;
-   margin: auto;
-   margin-top: 50px;
-}
-
-.container form h1{
-    color: #fff;
-    font-weight: 500;
-    margin-top: 20px;
-    width: 500px;
-    text-align: center;
-}
-
-.container form input{
-    width: 290px;
-    height: 40px;
-    padding-left: 10px;
-    outline: none;
-    border: none;
-    font-size: 15px;
-    margin-bottom: 10px;
-    background: none;
-    border-bottom: 2px solid #fff;
-}
-
-.container form input::placeholder{
-    color: #ddd;
-}
-
-.container form #lastName,
-.container form #mobile{
-    margin-left: 20px;
-}
-
-.container form h4{
-    color: #fff;
-    font-weight: 300;
-    width: 600px;
-    margin-top: 20px;
-}
-
-.container form textarea{
-    background: none;
-    border: none;
-    border-bottom: 2px solid #fff;
-    color: #fff;
-    font-weight: 200;
-    font-size: 15px;
-    padding: 10px;
-    outline: none;
-    min-width: 600px;
-    max-width: 600px;
-    min-height: 80px;
-    max-height: 80px;
-}
-
-textarea::-webkit-scrollbar{
-    width: 1em;
-}
-
-textarea::-webkit-scrollbar-thumb{
-    background-color: rgba(194,194,194,0.713);
-}
-
-.container form #button{
-    border: none;
-    background: #fff;
-    border-radius: 5px;
-    margin-top: 20px;
+    justify-content: space-between;
+  }
+  
+  form .half .item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    width: 48%;
+  }
+  
+  form label{
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+  }
+  
+  form .half .item input{
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 16px;
+    width: 100%;
+    height: 44px;
+    background: transparent;
+    font-size: 17px;
+  }
+  
+  form .full{
+    margin-bottom: 24px;
+  }
+  
+  form .full textarea{
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 12px 16px;
+    width: 100%;
+    height: 200px;
+    font-size: 17px;
+  }
+  
+  form .action{
+    margin-bottom: 32px;
+  }
+  
+  form .action input{
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 13px;
     font-weight: 600;
-    font-size: 20px;
-    color: #333;
-    width: 100px;
-    padding: 0;
-    margin-right: 500px;
-    margin-bottom: 30px;
-    transition: 0.3s;
-}
-
-.container form #button:hover{
-    opacity: 0.7;
-}
-
+    height: 44px;
+    letter-spacing: 3px;
+    outline: 0;
+    padding: 0 20px 0 22px;
+    margin-right: 10px;
+    color: aliceblue;
+    
+  }
+  
+  form .action input[type="submit"]{
+    background: white;
+    color: rgb(185, 179, 179);
+  }
+  
+  form .icons a{
+    border: 1px solid white;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 600;
+    width: 38px;
+    margin-right: 10px;
+  }
+  
+  form .half .item input:focus, form .full textarea:focus, form .action input[type="reset"]:hover, form .icons a:hover{
+    background: rgba(255,255,255,0.075);
+  }
+  
+  @media (max-width: 480px){
+    form .half{
+      flex-direction: column;
+    }
+    form .half .item{
+      width: 100%;
+    }
+    form .action{
+      display: flex;
+      flex-direction: column;
+    }
+    form .action input{
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
