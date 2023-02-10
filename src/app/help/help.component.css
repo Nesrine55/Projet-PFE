@@ -1,0 +1,63 @@
+.content-box{
+  
+    
+    color: #fff;
+
+}
+
+h1{
+    text-align: center;
+    padding-top: 100px;
+}
+h1::after{
+    content: '';
+    background: #9ab5ee;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 50px ;
+
+}
+.service .icon{
+    font-size: 30px;
+    margin: 20px auto;
+    padding:18px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    color: #9ab5ee;
+    border: 1px solid #9ab5ee;
+
+}
+.service p{
+    font-size: 15px;
+    margin-top: 10px;
+    color: #fff;
+    padding: 20px;
+
+}
+.service span{
+    color: #9ab5ee;
+    transition: .5s;
+
+}
+
+.service .col-md-3:hover{
+    background: linear-gradient(rgba(7, 7, 7, 0.812),#9ab5ee);
+    cursor: pointer;
+    color: #000;
+    box-shadow: -5px 5px 10px 0 rgba(7, 7, 7, 0.812);
+    transition: .5s;
+}
+
+.service .col-md-3:hover .icon{
+    border: 1px solid #fff;
+    color: #fff;
+}
+.service .col-md-3:hover p{
+    color: #fff;
+}
+.service .col-md-3:hover span{
+    color: #fff;
+
+}

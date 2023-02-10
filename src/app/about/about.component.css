@@ -1,126 +1,113 @@
-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 80vh;
-    width: 85vw;
-    margin: 0 auto;
-    
-}
-.image{
-    background: url("../../assets/undraw_Team_page_re_cffb.png") center/cover no-repeat;
 
-   
-}
-.content{
-    background: #cacfdb;
+.about{
+    height: 80vh;
+    width: 100%;
+    
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
 }
-.content h2{
-    text-transform: uppercase;
-    font-size: 26px;
-    letter-spacing: 6px;
-    opacity: 0.9;
-    
+
+.about .main img{
+    width: 580px;
+    max-width: 100%;
+    height: auto;
+    padding: 0 10px;
+    margin-top: 60px;
 }
-.content span{
-    height: 0.5px;
-    width: 80px;
-    background: #9ab5ee;
-    margin: 30px 0;
+.all-text{
+    width: 600px;
+    max-width: 100%;
+    padding: 0 10px;
 }
-.content p{
-    padding-bottom: 15px;
-    font-weight: 300;
-    opacity: 0.7;
-    width: 60%;
-    text-align: center;
+.main{
+    width: 1290px;
+    max-width: 95%;
     margin: 0 auto;
-    line-height: 1.7;
-    font-size: large;
-}
-.links{
-    margin: 15px 0;
-}
-.links li{
-    border: 0.5px solid #9ab5ee;
-    list-style: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    width: 160px;
-    text-align: center;
-}
-.links li a{
-    text-transform: uppercase;
-    color: #9ab5ee;
-    text-decoration: none;
-}
-.links li:hover{
-    border-color: #9ab5ee;
-}
-.links li:hover a{
-    color :#9ab5ee;
-}
-.vertical-line{
-    height: 30px;
-    width: 0.5px;
-    background: #9ab5ee;
-    margin: 0 auto;
-}
-.icons{
     display: flex;
-    padding: 15px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
 }
-.icons li{
-    display: block;
-    padding: 5px;
-    margin: 5px;
+
+.all-text h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #5f6b85;
+    font-weight: 400;
+    margin-bottom: 10px;
+     
 }
-.icons li i{
-    font-size: 26px;
-    opacity: 0.8;
-}
-.icons li i:hover{
+.all-text h4{
+    font-size: 65px;
     color: #9ab5ee;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+.all-text p{
+    font-family: 'Roboto' , sans-serif;
+    font-size: 16px;
+    color: #777777;
+    line-height: 30px;
+    margin-bottom: 35px;
 }
 
+.btn button{
+    background: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    color:#9ab5ee ;
+    border: none;
+    outline: none;
+    box-shadow: 0px 16px 32px 0px rgb(0, 0, 0/ 6%);
+    margin-right: 20px;
+    border-radius: 25px;
 
-/*****************/
 
-@media(max-width: 992px){
-    section{
-        grid-template-columns: 1fr;
+}
+
+.btn button:hover{
+    background-color: #9ab5ee;
+    color: white;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btn .btn2{
+    background: #9ab5ee;
+    color: white;
+
+}
+
+@media screen and (max-width:1250px) {
+    .about{
         width: 100%;
+        height: auto;
+        padding: 60px 0;
     }
-    .image{
-        height: 100vh;
-        
+    .all-text{
+        text-align:center;
+        margin-top: 40px;
+
     }
-    .content{
-        height: 100vh;
+    @media screen and (max-width:650px) {
+        .about .main img{
+            margin-bottom: 35px;
+        }
+        .all-text h1{
+            font-size:35px ;
+            margin-bottom: 20px;
+
+        }
+        .all-text h4{
+            font-size: 45px;
+            line-height: 50px;
+        }
+        button:last-child {
+            margin-top: 10px;
+          }
     }
-    .content h2{
-        font-size: 20px;
-        margin-top: 50px;
-    }
-    .content span{
-        margin: 20px 0;
-    }
-    .content p{
-        font-size: 14px;
-    }
-    .links li a{
-        font-size: 14px;
-    }
-    .links{
-        margin: 5px 0;
-    }
-    .links li{
-        padding: 6px 10px;
-    }
-    .icons li i{
-        font-size: 15px;
-    }
+    
 }
