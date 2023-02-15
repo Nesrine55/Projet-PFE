@@ -1,6 +1,19 @@
-
 <div class="container" id="container">
-   
+   <div class="form-container sign-up-container">
+       <form action="#">
+           <h1>Reset password</h1>
+          
+           <div class="form-group">
+            <input type="password" placeholder="New Password" id="password" class="pass"/>
+            <span class="error"></span>
+         </div>
+         <div class="form-group">
+            <input type="password" placeholder="Confirm password" id="Conpassword" class="Conpass"/>
+            <span class="error"></span>
+         </div>
+           <button>Reset</button>
+       </form>
+   </div>
    <div class="form-container sign-in-container">
        <form action="#">
            <h1>Sign in</h1>
@@ -9,22 +22,31 @@
                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
            </div>
-           <span>or use your account</span>
-           <input type="email" placeholder="Email" />
-           <input type="password" placeholder="Password" />
-           <a href="#">Forgot your password?</a>
+           
+           <div class="form-group">
+            <input type="email" placeholder="Email" id="email" class="email"/>
+            <span class="error"></span>
+         </div>
+         <div class="form-group">
+            <input type="password" placeholder="Password" id="password" class="pass"/>
+            <span class="error"></span>
+         </div>
+           <a routerLink="#" id="signUp">Forgot your password?</a>
            <button>Sign In</button>
        </form>
    </div>
    <div class="overlay-container">
        <div class="overlay">
-           
+           <div class="overlay-panel overlay-left">
+               <h1>Forget your password !</h1>
+               <p>Create your new password here</p>
+               <button class="ghost" id="signIn">Back to login</button>
+           </div>
            <div class="overlay-panel overlay-right">
                <h1>Welcome Back!</h1>
                <p>To keep connected with us please login with your personal info</p>
+               <img src="../../assets/loginpic.png" alt="">
            </div>
        </div>
    </div>
 </div>
-   
- 

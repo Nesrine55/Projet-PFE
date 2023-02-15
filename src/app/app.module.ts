@@ -11,7 +11,6 @@ import { ContactComponent } from './contact/contact.component';
 import { JoinusComponent } from './joinus/joinus.component';
 import { LoginComponent } from './login/login.component';
 import { LoginnnComponent } from './loginnn/loginnn.component';
-import { ForgetpswComponent } from './forgetpsw/forgetpsw.component';
 import { MailvalidationComponent } from './mailvalidation/mailvalidation.component';
 
 @NgModule({
@@ -26,7 +25,6 @@ import { MailvalidationComponent } from './mailvalidation/mailvalidation.compone
     JoinusComponent,
     LoginComponent,
     LoginnnComponent,
-    ForgetpswComponent,
     MailvalidationComponent,
   ],
   imports: [

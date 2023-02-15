@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DiscoverComponent } from './discover/discover.component';
-import { ForgetpswComponent } from './forgetpsw/forgetpsw.component';
 import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home.component';
 import { JoinusComponent } from './joinus/joinus.component';
@@ -13,7 +12,7 @@ import { MailvalidationComponent } from './mailvalidation/mailvalidation.compone
 
 
 const routes: Routes = [
-  {path:'home',component:HomeComponent},
+  {path:'',component:HomeComponent},
   {path:'discover',component:DiscoverComponent},
   {path:'help',component:HelpComponent},
   {path:'about',component:AboutComponent},
@@ -21,7 +20,6 @@ const routes: Routes = [
   {path:'joinus',component:JoinusComponent},
   {path:'login',component:LoginComponent},
   {path:'loginnn',component:LoginnnComponent},
-  {path:'forgetpsw',component:ForgetpswComponent},
   {path:'mailvalidation',component:MailvalidationComponent}
 
 ];
