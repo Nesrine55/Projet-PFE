@@ -1,11 +1,11 @@
 
     <!-- partial:index.partial.html -->
-    <div class="container">
+   <!-- <div class="container">
        <section id="formHolder">
     
           <div class="row">
     
-             <!-- Brand Box -->
+             !-- Brand Box --
              <div class="col-sm-6 brand">
                <a href="#" class="logo">Eas4trainee <span>.</span></a>
    
@@ -23,11 +23,11 @@
 
              
     
-             <!-- Form Box -->
+             !-- Form Box --
              <div class="col-sm-6 form">
     
                 
-     <!-- Signup Form -->
+     !-- Signup Form --
      <div class="signupC form-peice switched">
       <form class="signupC-form" action="#" method="post">
          <div class="form-group">
@@ -64,9 +64,9 @@
             <a href="#" class="switch">I'm a Student</a>
          </div>
       </form>
-   </div><!-- End Signup Form -->
+   </div>-- End Signup Form --
     
-                <!-- Signup Form -->
+                !-- Signup Form 
                 <div class="signup form-peice">
                    <form class="signup-form" action="#" method="post">
     
@@ -104,13 +104,86 @@
                          <a href="#" class="switch">I'm a Company</a>
                       </div>
                    </form>
-                </div><!-- End Signup Form -->
+                </div>!-- End Signup Form 
              </div>
           </div>
     
        </section>
     
-    </div>
-   
+    </div>-->
+
+    
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+          <form action="#">
+              <h1>Create Account Student</h1>
+              <div class="social-container">
+                  <a routerLink="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                  <a routerLink="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                  <a routerLink="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              
+              <div class="form-group">
+               <input type="text" placeholder="Name" id="name" class="name"/>
+               <span class="error"></span>
+            </div>
+            <div class="form-group">
+               <input type="email" placeholder="Email" id="email" class="email"/>
+               <span class="error"></span>
+            </div>
+            <div class="form-group">
+               <input type="password" placeholder="Password" id="password" class="pass"/>
+               <span class="error"></span>
+            </div>
+            <div class="form-group">
+               <input type="password" placeholder="Confirm password" id="Conpassword" class="Conpass"/>
+               <span class="error"></span>
+            </div>
+              <button>Sign Up</button>
+          </form>
+      </div>
+      <div class="form-container sign-in-container">
+          <form action="#">
+              <h1>Create account Company</h1>
+              <div class="social-container">
+                  <a routerLink="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                  <a routerLink="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                  <a routerLink="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <div class="form-group">
+               <input type="text" placeholder="Name" id="name" class="name"/>
+               <span class="error"></span>
+            </div>
+            <div class="form-group">
+               <input type="email" placeholder="Email" id="email" class="email"/>
+               <span class="error"></span>
+            </div>
+            <div class="form-group">
+               <input type="password" placeholder="Password" id="password" class="pass"/>
+               <span class="error"></span>
+            </div>
+            <div class="form-group">
+               <input type="password" placeholder="Confirm password" id="Conpassword" class="Conpass"/>
+               <span class="error"></span>
+            </div>
+              <button>Sign Up</button>
+          </form>
+      </div>
+      <div class="overlay-container">
+          <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                  <h1>Welcome Company!</h1>
+                  <p>To join us enter your informations</p>
+                  <button class="ghost" id="signIn">Sign Up</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                  <h1>Hello, Student!</h1>
+                  <p>Enter your personal details and start journey with us</p>
+                  <button class="ghost" id="signUp">Sign Up</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
     
   
