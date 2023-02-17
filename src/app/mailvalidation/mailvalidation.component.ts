@@ -9,42 +9,47 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./mailvalidation.component.css']
 })
 export class MailvalidationComponent {
-  /*public ngOnInit(){
-    const otp= document.querySelectorAll('.otp-field');
+  public ngOnInit(){
 
-    otp[0].focus();
-    otp.forEach((field,index) => {
-      field.addEventListener('keydown', (e) => {
-        if(e.key >= 0 && e.key <=9){
-          otp[index].value="";
-          setTimeout(() =>{
-            otp[index+1].focus();
-          }, 4);
+    const inputs = document.querySelectorAll("input");
+    const button = document.querySelector("button") as HTMLButtonElement;
+    inputs.forEach((input, index1) => {
+    input.addEventListener("keyup", (e) => {
+    
+    const currentInput = input as HTMLInputElement;
+    const nextInput = input.nextElementSibling as HTMLInputElement | null;
+    const prevInput = input.previousElementSibling as HTMLInputElement | null;
+
+    if (currentInput.value.length > 1) {
+      currentInput.value = "";
+      return;
+    }
+    
+    if (nextInput && nextInput.hasAttribute("disabled") && currentInput.value !== "") {
+      nextInput.removeAttribute("disabled");
+      nextInput.focus();
+    }
+
+    if (e.key === "Backspace") {
+      inputs.forEach((input, index2) => {
+        
+        if (index1 <= index2 && prevInput) {
+          input.setAttribute("disabled", "true");
+          input.value = "";
+          prevInput.focus();
         }
-        else if(e.key === 'backspace'){
-          setTimeout(() =>{
-            otp[index-1].focus();
-          }, 4);
-        }
-
-
       });
-    });
-  }*/
-  emailForm: FormGroup;
-  email: String | undefined;
-
-constructor(private formBuilder: FormBuilder) {
-  this.emailForm = this.formBuilder.group({
-    email: ['', [Validators.required, Validators.email]]
+    }
+    
+    if (!inputs[3].disabled && inputs[3].value !== "") {
+      button.classList.add("active");
+      return;
+    }
+    button.classList.remove("active");
   });
-}
+});
 
-validateEmail() {
-  if (this.emailForm.valid) {
-    // send OTP to the email
+window.addEventListener("load", () => (inputs[0] as HTMLInputElement).focus());
 
 
-  }
-}
-}
+}}

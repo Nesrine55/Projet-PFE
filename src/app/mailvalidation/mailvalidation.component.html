@@ -1,16 +1,17 @@
-<div class="verif">
-    <h1>Verify Your Account</h1>
-    <p>We emailed you the code to Confirm your email address</p>
-    <form (ngSubmit)="validateEmail()">
-        <div class="error-text">
-            <h5>error</h5>
-        </div>
-        <div class="fields-input">
-            <input type="email" class="email" [(ngModel)]="email" name="email" required />
 
-        </div>
-        <div class="submit">
-            <input type="submit" value="Verify Now" class="button">
-        </div>
+<h1>Verify your email before connecting to the app</h1>
+<div class="container">
+    <header>
+      <i class="bx bxs-check-shield"></i>
+    </header>
+    <h4>Enter OTP Code</h4>
+    <form action="#">
+      <div class="input-field">
+        <input type="number" />
+        <input type="number" disabled />
+        <input type="number" disabled />
+        <input type="number" disabled />
+      </div>
+      <button>Verify OTP</button>
     </form>
-</div>
+  </div>

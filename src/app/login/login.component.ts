@@ -12,6 +12,7 @@ export class LoginComponent {
 
 
   public ngOnInit(){
+    
     const signUpButton: HTMLElement = document.getElementById('signUp')!;
     const signInButton: HTMLElement = document.getElementById('signIn')!;
     const container: HTMLElement = document.getElementById('container')!;

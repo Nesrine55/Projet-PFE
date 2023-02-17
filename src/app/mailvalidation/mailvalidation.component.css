@@ -1,69 +1,82 @@
-h1{
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: white;
-    margin-top: 100px;
-}
-p{
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: white;
-    margin-top: 100px;
-}
-.error-text{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:where(.container, form, .input-field, header) {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 15px 0;
-}
-h5{
-    font-size: 12px;
-    text-transform: uppercase;
-    padding: 8px 30px;
-    background: #d19e9e;
-    text-decoration: none;
-    color: rgb(103, 6, 6);
-    }
-
-
-.fields-input{
-    display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 25px 0;
-    
-
-}
-.email{
-    width: 350px;
-    height: 50px;
-    border-radius: 20px;
-
-
-}
-.submit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.button{
-    font-size: 12px;
-    text-transform: uppercase;
-    padding: 8px 30px;
-    background: #9ab5ee;
-    text-decoration: none;
+  }
+  h1{
+    font-size: 40px;
+    margin-top: 40px;
+    line-height:60px ;
     color: #fff;
-    border-radius: 30px;
-    
-}
+    text-align: center;
+    font-weight: bolder;
+  }
+  .container {
+    font-family: "Poppins", sans-serif;
 
-@media only screen and (max-width: 455) {
-    .otp-field{
-        font-size: 55px;
-        
-        height: 80px;
-        width: 80px;
-    }
-}
+    background: #0c0c0c65;
+    padding: 20px 65px;
+    border-radius: 12px;
+    row-gap: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin-top: 100px;
+  }
+  .container header {
+    height: 75px;
+    width: 75px;
+    background: #3a63ba;
+    color: #fff;
+    font-size: 3.5rem;
+    border-radius: 50%;
+  }
+  .container h4 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  form .input-field {
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .input-field input {
+    height: 45px;
+    width: 42px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  .input-field input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  .input-field input::-webkit-inner-spin-button,
+  .input-field input::-webkit-outer-spin-button {
+    display: none;
+  }
+  form button {
+    margin-top: 25px;
+    width: 100%;
+    color: #fff;
+    font-size: 1.5rem;
+
+    border: none;
+    padding: 9px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    pointer-events: none;
+    background: #9ab5ee;
+    transition: all 0.2s ease;
+  }
+  form button.active {
+    background: #4872cc;
+    pointer-events: auto;
+  }
+  form button:hover {
+    background: #214eb0;
+  }
+  
