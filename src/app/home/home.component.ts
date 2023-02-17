@@ -1,5 +1,6 @@
 import { Component,AfterViewInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 
 

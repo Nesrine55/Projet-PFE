@@ -12,6 +12,7 @@ import { JoinusComponent } from './joinus/joinus.component';
 import { LoginComponent } from './login/login.component';
 import { LoginnnComponent } from './loginnn/loginnn.component';
 import { MailvalidationComponent } from './mailvalidation/mailvalidation.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   
@@ -26,6 +27,7 @@ import { MailvalidationComponent } from './mailvalidation/mailvalidation.compone
     LoginComponent,
     LoginnnComponent,
     MailvalidationComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

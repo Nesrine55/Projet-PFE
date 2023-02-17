@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
-declare var $: any;
 
 @Component({
   selector: 'app-root',
@@ -11,15 +10,6 @@ declare var $: any;
 export class AppComponent {
   title = 'stage';
   public ngOnInit(){
-    $(document).ready(function() {
-      $(".toggle").on("click", function() {
-          if ($(".item").hasClass("active")) {
-              $(".item").removeClass("active");
-          } else {
-              $(".item").addClass("active");
-          }
-      });
-  });
-  }
 
-}
+
+}}

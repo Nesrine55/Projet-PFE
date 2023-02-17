@@ -20,7 +20,8 @@ const routes: Routes = [
   {path:'joinus',component:JoinusComponent},
   {path:'login',component:LoginComponent},
   {path:'loginnn',component:LoginnnComponent},
-  {path:'mailvalidation',component:MailvalidationComponent}
+  {path:'mailvalidation',component:MailvalidationComponent},
+  { path: 'student', loadChildren: () => import('./student/student.module').then(m => m.StudentModule) }
 
 ];
 
