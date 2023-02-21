@@ -12,17 +12,18 @@ a.logo {
     display: inline-block;
   }
   
+
+ 
+
+  
   nav {
     
     background: #2915aa00;
     padding: 5px 20px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    
+    text-decoration: none;
   }
-  ul{
-    list-style-type: none;
-  
-  }
+
   a {
     color: white;
     text-decoration: none;
@@ -31,20 +32,23 @@ a.logo {
     color: #ffffff;
   
   }
-  
-  .logo a:hover {
-    text-decoration: none;
-    color: #070956;
-  
-  }
   .menu li {
     font-size: 16px;
     padding: 15px 5px;
     white-space: nowrap;
-    
+
     
   }
+  .item.active{
+    color: #9ab5ee;
   
+  }
+  
+  .logo a:hover {
+    color: #070956;
+  
+  }
+ 
   .logo a,
   .toggle a {
     font-size: 20px;
@@ -52,16 +56,11 @@ a.logo {
   .button.secondary {
     border-bottom: 1px #444 solid;
   }
-  .item.active{
-    text-decoration: none;
-    color: #9ab5ee;
   
-  }
   
   
   
   .toggle .item.active{
-    text-decoration: none;
     color: #9ab5ee;
   }
   

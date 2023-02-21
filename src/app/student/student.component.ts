@@ -8,6 +8,25 @@ import { Component } from '@angular/core';
 export class StudentComponent {
 
   public ngOnInit(){
+
+    /*const box = document.getElementById('box') as HTMLElement;
+    let down = false;
+    
+    function toggleNotifi(): void {
+      if (down) {
+        box.style.height = '0px';
+        box.style.opacity = '0';
+        down = false;
+      } else {
+        box.style.height = '510px';
+        box.style.opacity = '1';
+        down = true;
+      }
+    }
+    
+    const div = document.getElementById('.notify-icon') as HTMLElement;
+    div.onclick=toggleNotifi;*/
+
     let arrow = document.querySelectorAll(".arrow");
 
 for (let i = 0; i < arrow.length; i++) {
@@ -26,6 +45,8 @@ console.log(sidebarBtn);
 sidebarBtn.addEventListener("click", () => {
   sidebar.classList.toggle("close");
 });
+
+
 
   }
 
